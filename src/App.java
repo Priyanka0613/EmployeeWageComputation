@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 import Employee.Employee;
 public class App {
     public static void main(String[] args) throws Exception {
@@ -30,7 +29,13 @@ public class App {
             case 4:
                 System.out.println("Your Monthly Wage is: " + Employee.monthlywagecheck());
                 break;
+            
+            case 5:
+                System.out.println("Your Monthly Wage under condition is: " + Employee.monthlywagecheckcond());
+                break;
 
+            default:
+                System.out.println("Invalid request");
         }
 
         s.close();
