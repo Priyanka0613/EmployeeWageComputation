@@ -2,10 +2,19 @@ package Employee;
 import java.util.Random;
 
 public class Employee {
-    public static void checkPresentAbsent(){
+    public static int checkPresentAbsent(){
         Random random = new Random();
-        int x= random.nextInt(2);
-        if(x==0){System.out.println("You were absent!");}
-        else{System.out.println("You were present");}
+        return random.nextInt(2);
+    }
+
+    public static void printPresentAbsent(){
+        int x=checkPresentAbsent();
+        if(x==0){System.out.println("absent");}
+        else{System.out.println("present");}
+    }
+
+    public static int dailyWage(){
+        int x=checkPresentAbsent();
+        return x*20*8;
     }
 }
