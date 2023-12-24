@@ -23,15 +23,27 @@ public class App {
                 break;
 
             case 3:
-                System.out.println("Your Daily Wage is: " + Employee.dailyWage());
+                System.out.print("Enter your wage per hour: ");
+                int x=s.nextInt();
+                System.out.println("Your Daily Wage is: " + Employee.dailyWage(x));
                 break;
             
             case 4:
-                System.out.println("Your Monthly Wage is: " + Employee.monthlywagecheck());
+                System.out.print("Enter your wage per hour: ");
+                int a=s.nextInt();
+                System.out.print("Enter your working days per month: ");
+                int y=s.nextInt();
+                System.out.println("Your Monthly Wage is: " + Employee.monthlywagecheck(a,y));
                 break;
             
             case 5:
-                System.out.println("Your Monthly Wage under condition is: " + Employee.monthlywagecheckcond());
+                System.out.print("Enter your wage per hour: ");
+                int b=s.nextInt();
+                System.out.print("Enter your working days per month: ");
+                int c=s.nextInt();
+                System.out.print("Enter your wokrking hours per month: ");
+                int z=s.nextInt();
+                System.out.println("Your Monthly Wage under condition is: " + Employee.monthlywagecheckcond(b,c,z));
                 break;
 
             default:

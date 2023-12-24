@@ -24,30 +24,30 @@ public class Employee {
         else{System.out.println("full-time");}
     }
 
-    public static int dailyWage(){
+    public static int dailyWage(int wage){
         int fulltimehour=8;
         int parttimehour=4;
         if(fulltimeParttime()==1){
-            return x*20*fulltimehour;
+            return x*wage*fulltimehour;
         }else{
-            return x*20*parttimehour;
+            return x*wage*parttimehour;
         }
     }
 
-    public static int monthlywagecheck(){
+    public static int monthlywagecheck(int wage, int workingdayspermonth){
         int fulltimehour=8;
         int parttimehour=4;
         if(fulltimeParttime()==1){
-            return 20*x*20*fulltimehour;
+            return workingdayspermonth*x*wage*fulltimehour;
         }else{
-            return 20*x*20*parttimehour;
+            return workingdayspermonth*x*wage*parttimehour;
         }
     }
 
-    public static int monthlywagecheckcond(){
+    public static int monthlywagecheckcond(int wage, int workingdayspermonth, int workinghourspermonth){
         int day=0;
         int hour=0;
-        while(day<=20 && hour<=100){
+        while(day<=workingdayspermonth && hour<=workinghourspermonth){
             if(x==1){
                 day++;
                 if(y==0){
@@ -58,7 +58,7 @@ public class Employee {
             }
         }
 
-        int wage=hour*20;
-        return wage;
+        int wageans=hour*wage;
+        return wageans;
     }
 }
